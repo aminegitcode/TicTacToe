@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "poppins", sans-serif;
+}
+
+body {
+  background-color: #270000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+/* center the TicTacToe elemnt */
+.tictactoe {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: ease-in-out 0.5s;
+  max-width: 100%;
+}
+
+/*style for the Title*/
+h1 {
+  font-size: 4rem;
+  font-family: "poppins", sans-serif;
+  font-weight: 600;
+  animation: fade-down 1s;
+}
+
+/*  player turn element*/
+.turn {
+  background-color: #ff868620;
+  letter-spacing: 1px;
+
+  margin: 0.6rem 0.6rem 0.6rem 0.6rem;
+  padding: 2px;
+  border-radius: 50px;
+  width: 9rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  height: 2.5rem;
+  animation: fade-down 1s;
+}
+.player_turn {
+  font-size: 1.5rem;
+}
+
+span {
+  color: #f2ff00;
+}
+
+/* Style of one cell */
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  font-weight: 600;
+  color: #fccece;
+  background-color: #ff868636;
+  margin: 0.3rem;
+  border-radius: 15px;
+  cursor: pointer;
+  width: 94%;
+  height: 94%;
+}
+/* style for the wining cells*/
+.winnig-cell {
+  background-color: #ffd000;
+  color: rgb(255, 0, 0);
+}
+
+.x_hover:hover::after {
+  content: "X";
+
+  opacity: 0.2;
+}
+.o_hover:hover::after {
+  content: "O";
+
+  opacity: 0.2;
+}
+
+.board {
+  display: grid;
+  margin: 0 auto;
+}
+
+/* Creates a 3x3 grid with each cell sized 10rem by 10rem */
+.cases_board {
+  display: grid;
+  grid-template-columns: 10rem 10rem 10rem;
+  grid-template-rows: 10rem 10rem 10rem;
+  animation: fade-opacity 1s;
+  max-width: 100%;
+}
+
+/* display the game stats in flex */
+.gameStats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  animation: fade-up 1s;
+}
+
+.winner {
+  text-align: center;
+  margin: 10px;
+  font-size: 40px;
+  border: 2px solid #ffd700;
+  border-radius: 50px;
+  color: #ffd700;
+  font-weight: 700;
+  transition: ease-in 1s;
+  animation: fade-opacity;
+}
+.winner.show {
+  opacity: 1; /* Make the winner message visible */
+  animation: fade-opacity;
+}
+
+.x_wins,
+.draw,
+.y_wins {
+  width: 90%;
+  border-radius: 50px;
+  margin: 5px;
+  padding: 5px 0 5px 10px;
+  background-color: #ff86862a;
+}
+
+button {
+  background-color: #ff86862a;
+  color: #ffd700;
+  border: none;
+  padding: 15px;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 15px 0 0 0;
+  max-width: 100%;
+  width: 100%;
+  animation: fade-up 1s;
+}
+button:hover {
+  background-color: #ff86863c;
+}
+button:active {
+  background-color: #ff86861b;
+}
+
+.play_again_button {
+  margin: 50px;
+}
+span {
+  color: #ffd700;
+}
+
+@keyframes fade-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fade-opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .cases_board {
+    grid-template-columns: 6.5rem 6.5rem 6.5rem;
+    grid-template-rows: 6.5rem 6.5rem 6.5rem;
+  }
+
+  .cell {
+    font-size: 3.5rem;
+  }
+  .x_wins,
+  .draw,
+  .y_wins {
+    width: 100%;
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 600px) {
+  h1 {
+    font-size: 3rem;
+  }
+  .cases_board {
+    grid-template-columns: 8.5rem 8.5rem 8.5rem;
+    grid-template-rows: 8.5rem 8.5rem 8.5rem;
+  }
+}
+
+
+@media (min-width: 1000px) {
+ h1 {
+    font-size: 4rem;
+  }
+  .cases_board {
+    grid-template-columns: 11rem 11rem 11rem;
+    grid-template-rows: 11rem 11rem 11rem;
+  }
+}
