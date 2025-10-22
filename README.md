@@ -6,16 +6,16 @@ Le jeu propose une interface moderne et interactive, où les joueurs X et O s’
 
 📝 Fonctionnalités
 --------------
--Gameplay interactif : cliquez sur les cases pour jouer à tour de rôle.
--Détection automatique du gagnant et des matchs nuls.
--Scoreboard dynamique : affiche les victoires de X, de O et les égalités.
--Boutons "Play Again" et "Clear Stats" pour rejouer ou réinitialiser les scores.
--Cases gagnantes animées avec surbrillance pour une meilleure visibilité.
--Responsive design : s’adapte à toutes les tailles d’écran.
+- Gameplay interactif : cliquez sur les cases pour jouer à tour de rôle.
+- Détection automatique du gagnant et des matchs nuls.
+- Scoreboard dynamique : affiche les victoires de X, de O et les égalités.
+- Boutons "Play Again" et "Clear Stats" pour rejouer ou réinitialiser les scores.
+- Cases gagnantes animées avec surbrillance pour une meilleure visibilité.
+- Responsive design : s’adapte à toutes les tailles d’écran.
 
 
 ⚡ Technologies utilisées
 -----------------
-React 
-CSS 
-Vite pour le bundling rapide
+- React 
+- CSS 
+- Vite 
